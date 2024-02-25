@@ -18,27 +18,32 @@
 <body>
   <header>
     <h1>Simple, traffic-based pricing</h1>
-    <p class="cta">Sign-up for our 30-day trial.<br> No credit card required.</p>
+    <p class="intro-para">Sign-up for our 30-day trial.<br> No credit card required.</p>
   </header>
   <main>
-    <article>
-      <label class="pageviews" for="pageviews">
-        <span class="pageviews-value">100K</span> Pageviews</label>
-      <input class="range-input" type="range" id="pageviews" name="pageviews" value="3" min="1" max="5" />
-      <p class="subscription-price"><span class="price-value">$16.00</span> / month</p>
 
-      <div class="toggle-container">
-        <label class="duration-label" for="toggleCheckbox">Monthly Billing</label>
-        <input class="toggle-input" type="checkbox" id="toggleCheckbox">
-        <label class="duration-label" for=" toggleCheckbox">Yearly Billing <span class="discount">25%</span></label>
+    <article>
+      <div>
+        <label class="pageviews-label" for="pageviews">
+          <span class="pageviews-value">100K</span> Pageviews</label>
+        <input class="range-input" type="range" id="pageviews" name="pageviews" value="3" min="1" max="5" />
+        <p class="price"><span class="price-total">$16.00</span> / month</p>
+
+        <div class="toggle-container">
+          <label class="duration-label" for="toggleCheckbox">Monthly Billing</label>
+          <input class="toggle-input" type="checkbox" id="toggleCheckbox">
+          <label class="duration-label" for="toggleCheckbox">Yearly Billing <span class="discount">-25%</span></label>
+        </div>
       </div>
       <hr>
+
       <ul class="features-list">
         <li>Unlimited websites</li>
         <li>100% data ownership</li>
         <li>Email reports</li>
       </ul>
-      <button>Start my trial</button>
+
+      <button class="cta-btn">Start my trial</button>
     </article>
   </main>
   <footer class="attribution">
