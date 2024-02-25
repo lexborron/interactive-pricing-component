@@ -8,26 +8,39 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Interactive pricing component</title>
 </head>
 
 <body>
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <p class="cta">Sign-up for our 30-day trial.<br> No credit card required.</p>
+  </header>
+  <main>
+    <article>
+      <label class="pageviews" for="pageviews">
+        <span class="pageviews-value">100K</span> Pageviews</label>
+      <input class="range-input" type="range" id="pageviews" name="pageviews" value="3" min="1" max="5" />
+      <p class="subscription-price"><span class="price-value">$16.00</span> / month</p>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required.
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-
+      <div class="toggle-container">
+        <label class="duration-label" for="toggleCheckbox">Monthly Billing</label>
+        <input class="toggle-input" type="checkbox" id="toggleCheckbox">
+        <label class="duration-label" for=" toggleCheckbox">Yearly Billing <span class="discount">25%</span></label>
+      </div>
+      <hr>
+      <ul class="features-list">
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </ul>
+      <button>Start my trial</button>
+    </article>
+  </main>
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.frontendmentor.io/profile/lexborron">Lexie Borron</a>.</p>
