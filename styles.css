@@ -1,0 +1,206 @@
+/* RESET */
+/* credit: https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+select {
+  font: inherit;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+/* BASE STYLES */
+
+:root {
+  /* Primary colors */
+  --clr-primary: hsl(227, 35%, 25%);
+  --clr-bg-slider: hsl(174, 86%, 45%);
+  --clr-bg-full-slider-bar: hsl(174, 77%, 80%);
+  --clr-bg-discount: hsl(14, 92%, 95%);
+  --clr-txt-discount: hsl(15, 100%, 70%);
+  --clr-txt-cta: hsl(226, 100%, 87%);
+  /* Neutral colors */
+  --clr-bg-component: hsl(0, 0%, 100%);
+  --clr-bg-body: hsl(230, 100%, 99%);
+  --clr-bg-empty-slider: hsl(224, 65%, 95%);
+  --clr-bg-toggle: hsl(223, 50%, 87%);
+  --clr-txt-body: hsl(225, 20%, 60%);
+  /* Font Styles */
+  --ff: "Manrope", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 1.5rem;
+  background: var(--clr-bg-body) url(images/bg-pattern.svg) no-repeat top left;
+  font-family: var(--ff);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--clr-txt-body);
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background: url(images/pattern-circles.svg) no-repeat center center / contain;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+}
+
+article {
+  background: var(--clr-bg-component);
+  margin: 2.5rem 0;
+  padding-bottom: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 14px 12px 0 hsla(14, 5%, 52%, 0.096);
+}
+
+article div:first-child {
+  padding: 2.5rem 1.5rem;
+}
+
+.attribution {
+  flex-shrink: 0;
+  color: var(--clr-txt-body);
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+
+.intro-para {
+  margin: 0.5rem;
+  line-height: 1.6;
+}
+
+.pageviews-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.price-total {
+  color: var(--clr-primary);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-right: 0.5rem;
+}
+
+/* RANGE INPUT */
+
+.range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 9px;
+  margin-top: 2.5rem;
+  background: var(--clr-bg-empty-slider);
+  border-radius: 50px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: calc((9px / 2) - (40px / 2));
+  }
+
+  &::-moz-range-thumb,
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: var(--clr-bg-slider) url(images/icon-slider.svg) no-repeat
+      center center;
+    border: none;
+    border-radius: 100%;
+  }
+
+  &::-webkit-slider-runnable-track,
+  &::-moz-range-progress {
+    height: 9px;
+    background: var(--clr-bg-full-slider-bar);
+    border-radius: 50px;
+  }
+}
+
+.toggle-container {
+  margin-top: 2rem;
+}
+
+.discount {
+  background: var(--clr-bg-discount);
+  padding: 0.3em 0.6em;
+  font-size: 0.65rem;
+  font-weight: 500;
+  border-radius: 100px;
+  color: var(--clr-txt-discount);
+}
+
+.toggle-input {
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--clr-bg-empty-slider);
+}
+
+.features-list {
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.cta-btn {
+  background: var(--clr-primary);
+  margin-top: 2rem;
+  padding: 0.8em 4em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-txt-cta);
+  border: none;
+  border-radius: 100px;
+}
